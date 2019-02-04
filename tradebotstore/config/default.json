@@ -1,0 +1,4 @@
+{
+    "usingKafka": true,
+    "kafkaClient": "192.168.1.5:9092"
+}
