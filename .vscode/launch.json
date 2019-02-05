@@ -7,12 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "nodemon",
+            "name": "Launch index.js",
+            "preLaunchTask": "compile",
             "runtimeExecutable": "nodemon",
-            "program": "${workspaceFolder}/src/index.js",
-            "restart": true,
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
+            "program": "${workspaceRoot}/src/index.js",
+            "outFiles": ["${workspaceRoot}/dist/**/*.js"],
+            "console": "integratedTerminal"
         }
     ]
 }
