@@ -17,13 +17,13 @@ export class BotStoreService {
             useNewUrlParser: true
         });
         this.mongoDb = this.mongoClient.db(this.config['database']);
-        this.matchedTransactions = this.mongoDb.collection('matchedTransactions')
+        this.matchedTransactions = this.mongoDb.collection('matchedtransactions')
     }
     async setupKafkaConsumer() {
         let consumer = this.kafkaClient.getConsumer('botstore-group');
         await consumer.connect();
         await consumer.subscribe({
-            topic: 'matchedTransactions',
+            topic: 'matchedtransactions',
             fromBeginning: true
         });
 
